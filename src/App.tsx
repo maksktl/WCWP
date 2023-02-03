@@ -150,7 +150,7 @@ function App() {
             alert('saved');
         }
     },[cryptoAggregators, cryptoAggregators1, fiat, crypto,
-        deposit, spreadFrom, spreadTo]);
+        deposit, spreadFrom, spreadTo, makerTaker, makerTaker1]);
 
     return (
     <div className="App">
