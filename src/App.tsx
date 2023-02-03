@@ -111,8 +111,7 @@ function App() {
         } else if (type === 'spread_to') {
             setSpreadTo(Number(value));
         }
-    }, [deposit, spreadFrom, spreadTo, setDeposit,
-    setSpreadFrom, setSpreadTo]);
+    }, [setDeposit, setSpreadFrom, setSpreadTo]);
 
     const handleResetClick = useCallback(() => {
         setBanks(initialBanks);
@@ -147,14 +146,11 @@ function App() {
         } else if(spreadFrom >= spreadTo) {
             alert('Спред до должен превышать спред от');
         } else {
+            console.log(makerTaker, makerTaker1)
             alert('saved');
         }
     },[cryptoAggregators, cryptoAggregators1, fiat, crypto,
-    deposit, spreadFrom, spreadTo]);
-
-    const handleGoBack = useCallback(() => {
-
-    },[]);
+        deposit, spreadFrom, spreadTo]);
 
     return (
     <div className="App">
